@@ -1,8 +1,13 @@
 const btn = document.querySelector("#button");
 const ctn = document.querySelector(".container");
-const box = document.querySelector(".box");
+const clean = document.querySelector("#clean");
 
-const result = [];
+let result = [];
+
+const newNumber = () => {
+  ctn.innerHTML = "";
+  result = [];
+};
 
 const generateNumber = () => {
   if (result.length === 5) {
@@ -25,3 +30,4 @@ const generateNumber = () => {
 };
 
 btn.addEventListener("click", generateNumber);
+clean.addEventListener("click", newNumber);
